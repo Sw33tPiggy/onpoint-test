@@ -82,10 +82,31 @@ const FirstCardStyle = styled(CardStyle)`
 	grid-area: a;
 
 	padding-left: 11.32vw;
+	&::before {
+		content: "";
+		position: absolute;
+		background-image: url("./imgs/slide3/eat.png");
+		background-size: cover;
+		background-repeat: no-repeat;
+		width: 6.44vw;
+		height: 6.15vw;
+		top: -3.07vw;
+	}
 `;
 
 const SecondCardStyle = styled(CardStyle)`
 	grid-area: b;
+
+	&::before {
+		content: "";
+		position: absolute;
+		background-image: url("./imgs/slide3/calendar.png");
+		background-size: cover;
+		background-repeat: no-repeat;
+		width: 6.7vw;
+		height: 5.46vw;
+		top: -2.63vw;
+	}
 `;
 
 const Slide = () => {

@@ -1,3 +1,4 @@
+import React from "react";
 import styled from "styled-components";
 
 export const SlideStyled = styled.div`
@@ -143,9 +144,9 @@ export const Background = ({
 	);
 };
 
-const Slide = () => {
+const Slide = React.forwardRef<HTMLElement>((_props, ref) => {
 	return (
-		<SlideStyled>
+		<SlideStyled ref={ref as any}>
 			<Background imgs={imgs} prefix={"slide1"} />
 			<div>
 				<Hello>Привет,</Hello>
@@ -163,5 +164,6 @@ const Slide = () => {
 			</div>
 		</SlideStyled>
 	);
-};
+});
+
 export default Slide;
